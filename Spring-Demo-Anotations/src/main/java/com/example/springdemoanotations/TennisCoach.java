@@ -1,6 +1,7 @@
 package com.example.springdemoanotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 //@Component("thatSillyCoach") explicit bean id
@@ -15,6 +16,7 @@ public class TennisCoach implements Coach{
         fortuneService= theFortuneService;
     }*/
     @Autowired
+    @Qualifier("randomFortuneService")
     public  void setForutne(FortuneService theFortuneService){
          this.fortuneService =  theFortuneService;
 
